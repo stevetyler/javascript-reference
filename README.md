@@ -36,7 +36,7 @@ In capturing model the event will be handled by the div first(click event handle
 
 In bubbling model it is the opposite. In this model the event will be first handled by the li first and the ul and at the last by the div element.
 
-How this works in JavaScript
+How 'this' works in JavaScript
 ------
 
 This always refers to the “owner” of the function we're executing, or rather, to the object that a function is a method of. When we define our faithful function doSomething() in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. An onclick property, though, is owned by the HTML element it belongs to.
