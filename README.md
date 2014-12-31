@@ -15,7 +15,7 @@ Potential problems:
 
 You need caution when managing some mouse events. If your code is handling the mousemoveevent you are in serious risk of creating a performance bottleneck because the mousemove event is triggered so often. The mouseout event has a <a href="http://www.quirksmode.org/js/events_mouse.html#link8">quirky behaviour</a> that is difficult to manage with event delegation.
 
-Event bubbling and capturing
+Event Bubbling and Capturing
 ------
 
 Event bubbling and capturing are two ways of event propagation in HTML DOM. In bubbling the event is first captured and handled by the inner most element and then propagated to outer elements.
@@ -49,10 +49,6 @@ Hashtable
 
 In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found.
 
-<h4> Why the following doesn't work as an IIFE: function foo(){ }();.</h4>
-
- (function foo(){ })();.
-<hr />
 <h4>The Difference between a variable that is: null, undefined or undeclared</h4>
 <hr />
 <h4>How would you go about checking for any of these states?</h4>
@@ -184,9 +180,11 @@ Make this work:
 <hr />
 <h4> What is the arity of a function?</h4>
  The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
- <hr />
-<h4> Advantages and disadvantages to using "use strict"</h4>
- Only compatible with ECMAscript 5.
+ 
+Advantages and disadvantages to using "use strict"
+------
+
+Only compatible with ECMAscript 5.
  
  
 <h4> Prototypal Inheritance</h4>
@@ -202,6 +200,11 @@ If so, what libraries have you used? (Mustache.js, Handlebars etc.)
 <h4> Explain "hoisting".</h4>
 <hr />
 <h4> What's the difference between an "attribute" and a "property"?</h4>
+<hr />
+
+<h4> Why the following doesn't work as an IIFE: function foo(){ }();.</h4>
+
+ (function foo(){ })();.
 <hr />
  
 
