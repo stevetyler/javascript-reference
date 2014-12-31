@@ -3,11 +3,13 @@ Event Delegation
 
 Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent.  That event listener analyses bubbled events to find a match on child elements.
 
-The benefits of JavaScript event delegation are:
+The benefits of JavaScript event delegation:
 
-*  There are less event handlers to setup and reside in memory leading to better performance and less crashing.
-*  There’s no need to re-attach handlers after a DOM update. *  *  If your page content is generated dynamically, via Ajax for example, you don’t need to add and remove event handlers as elements are loaded or unloaded.
-*  The potential problems may be less clear, but once you are aware of them they’re easily avoided:
+*  Less event handlers to setup and reside in memory leading to better performance and less crashing.
+*  No need to re-attach handlers after a DOM update. *  *  If your page content is generated dynamically, via Ajax for example, you don’t need to add and remove event handlers as elements are loaded or unloaded.
+
+Potential problems:
+
 *  There’s a risk your event management code could become a performance bottleneck, so keep it as lean as possible.
 *  Not all events bubble. The blur, focus, load and unload events don’t bubble like other events. The blur and focus events can actually be accessed using the capturing phase (in browsers other than IE) instead of the bubbling phase but that’s a story for another day.
 
