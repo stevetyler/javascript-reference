@@ -13,6 +13,7 @@
   1. [Hashtable](#hashtable)
   1. [Difference between .call and .apply](#callapply)
   1. [Arity of a function](#arity)
+  1. [Difference between == and ===](#equality)
   1. [The difference between null, undefined & undeclared](#nullundefined)
   1. [Closures and there Uses](#closures)
   1. [Anonymous functions use cases](#anonymous)
@@ -175,7 +176,7 @@ theFunction.call(valueForThis, arg1, arg2, ...)</code></pre>
 
 The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
 
-Difference between == and ===
+<a name='equality'>Difference between == and ===<a/>
 ------
 
 If the two operands are of the same type and have the same value, then === produces true and !== produces false.  == and != attempt to coerce the values. These are some of the interesting cases:
@@ -191,24 +192,24 @@ null == undefined   // true
 
 All of the comparisons above produce false with the === operator and it’s recommended to always use === and !==
 
-The Difference between a variable that is: null, undefined or undeclared
+<a name='nullundefined'>The Difference between a variable that is: null, undefined or undeclared
 ------
 
 How would you go about checking for any of these states?
 
-Closures and There Uses
+<a name='closures'>Closures and There Uses<a/>
 ------
 
-Anonymous Functions Use Cases
+<a name='anonymous'>Anonymous Functions Use Cases<a/>
 ------
 
-JavaScript Module Pattern
+<a name='modulepattern'>JavaScript Module Pattern<a/>
 ------
 
 clean namespacing.
 What if your modules are namespace-less?
 
-Code Organization
+<a name='organization'>Code Organization<a/>
 ------
 
 module pattern, classical inheritance
@@ -216,16 +217,16 @@ module pattern, classical inheritance
 Difference between: function Person(){}, var person = Person(), and var person = new Person()
 ------
 
-Function.prototype.bind
+<a name='bind'>Function.prototype.bind<a/>
 ------
 
-document.write()
+<a name='documentwrite'>document.write()<a/>
 ------
 
 <p>Most generated ads still utilize document.write() although its use is frowned upon</p>
 <hr />
 
-Feature Detection, Feature Inference, and using the UA string
+<a name='feature'>Feature Detection, Feature Inference, and using the UA string<a/>
 ------
 
 Getting query string parameter from the browser window's URL
@@ -246,9 +247,6 @@ Advantages and disadvantages to using "use strict"
 Only compatible with ECMAscript 5.
  
  
-Prototypal Inheritance
-------
-
 AMD vs CommonJS
 ------
 
