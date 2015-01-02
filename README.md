@@ -11,7 +11,7 @@ Benefits:
 
 Potential problems:
 
-*  There’s a risk your event management code could become a performance bottleneck, so keep it as lean as possible.
+*  There’s a risk your code could become a performance bottleneck, so keep as lean as possible.
 *  Not all events bubble. The blur, focus, load and unload events don’t bubble like other events. The blur and focus events can actually be accessed using the capturing phase (in browsers other than IE) instead of the bubbling phase but that’s a story for another day.
 
 You need caution when managing some mouse events. If your code is handling the mousemoveevent you are in serious risk of creating a performance bottleneck because the mousemove event is triggered so often. The mouseout event has a <a href="http://www.quirksmode.org/js/events_mouse.html#link8">quirky behaviour</a> that is difficult to manage with event delegation.
