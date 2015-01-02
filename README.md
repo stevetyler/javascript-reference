@@ -1,4 +1,4 @@
-Event Delegation
+Event delegation
 ------
 
 Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent. The event listener analyses bubbled events to find a match on child elements.
@@ -16,7 +16,7 @@ Potential problems:
 
 You need caution when managing some mouse events. If your code is handling the mousemoveevent you are in serious risk of creating a performance bottleneck because the mousemove event is triggered so often. The mouseout event has a <a href="http://www.quirksmode.org/js/events_mouse.html#link8">quirky behaviour</a> that is difficult to manage with event delegation.
 
-Event Bubbling and Capturing
+Event bubbling and capturing
 ------
 
 Event bubbling and capturing are two ways of event propagation in HTML DOM. In bubbling the event is first captured and handled by the inner most element and then propagated to outer elements.
@@ -39,7 +39,7 @@ In capturing model the event will be handled by the div first(click event handle
 
 In bubbling model it is the opposite. In this model the event will be first handled by the li first and the ul and at the last by the div element.
 
-Javascript Inheritance
+Javascript inheritance
 ------
 
 JavaScript only has one construct: objects and each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.
@@ -56,54 +56,10 @@ JSONP and how it's not really AJAX
 
 JSONP or "JSON with padding" is a communication technique used in JavaScript programs running in web browsers to request data from a server in a different domain, something prohibited by typical web browsers because of the same-origin policy.
 
-Host Objects and Native Objects
+Explain the same-origin policy with regards to JavaScript
 ------
 
-Host objects : 
-
-*  Array
-*  String
-*  Math
-*  parseInt
-*  eval
-
-Native objects: 
-
-*  window
-*  document
-*  location
-*  history
-*  setTimeout
-*  getElementsByTagName
-
-
-How 'this' Works in JavaScript
-------
-
-This always refers to the object that a function is a method of. When we define a function doSomething() in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. An onclick property, though, is owned by the HTML element it belongs to.
-
-http://quickleft.com/blog/jquery-conf-video-understanding-scope-in-javascript
-
-Hashtable
-------
-
-In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found.
-
-Difference Between .call and .apply
-------
-
-Apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
-
-<pre><code>theFunction.apply(valueForThis, arrayOfArgs)
-theFunction.call(valueForThis, arg1, arg2, ...)</code></pre>
-
-Arity of a function
-------
-
-The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
- 
-<h4> Explain the same-origin policy with regards to JavaScript.</h4>
- Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons to the URL http://store.company.com/dir/page.html:
+Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons to the URL http://store.company.com/dir/page.html:
 <table width="606" border="0" cellspacing="0" cellpadding="2">
 <tbody>
 <tr>
@@ -138,6 +94,59 @@ The arity property used to return the number of arguments expected by the functi
 </tr>
 </tbody>
 </table> 
+
+
+Host objects and native objects
+------
+
+Host objects : 
+
+*  Array
+*  String
+*  Math
+*  parseInt
+*  eval
+
+Native objects: 
+
+*  window
+*  document
+*  location
+*  history
+*  setTimeout
+*  getElementsByTagName
+
+Extending built in JavaScript objects
+------
+
+This technique is called monkey patching and breaks encapsulation. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional non-standard functionality.
+
+A good reason for extending a built-in prototype is to backport the features of newer JavaScript engines; for example Array.forEach, etc.
+
+How 'this' works in JavaScript
+------
+
+This always refers to the object that a function is a method of. When we define a function doSomething() in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. An onclick property, though, is owned by the HTML element it belongs to.
+
+http://quickleft.com/blog/jquery-conf-video-understanding-scope-in-javascript
+
+Hashtable
+------
+
+In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found.
+
+Difference between .call and .apply
+------
+
+Apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+
+<pre><code>theFunction.apply(valueForThis, arrayOfArgs)
+theFunction.call(valueForThis, arg1, arg2, ...)</code></pre>
+
+Arity of a function
+------
+
+The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
  
 The Difference between a variable that is: null, undefined or undeclared
 ------
@@ -168,8 +177,6 @@ Difference between: function Person(){}, var person = Person(), and var person =
 Function.prototype.bind
 ------
 
-<h4> When do you optimize your code?</h4>
-<hr />
 document.write()
 ------
 
@@ -180,11 +187,6 @@ Feature Detection, Feature Inference, and using the UA string
 ------
 
 
-Extending built in JavaScript objects
-
-This technique is called monkey patching and breaks encapsulation. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional non-standard functionality.
-
-A good reason for extending a built-in prototype is to backport the features of newer JavaScript engines; for example Array.forEach, etc.</p>
 
 document load and document ready event
 ------
