@@ -1,4 +1,5 @@
 <a name='toc'>Table of Contents</a>
+------
 
   1. [Event delegation](#eventdelegation)
   1. [Event bubbling & capturing](#bubblecapture)
