@@ -143,26 +143,26 @@ Native objects:
 *  setTimeout
 *  getElementsByTagName
 
-Extending built in JavaScript objects
+<a name='builtin'>Extending built in JavaScript objects<a/>
 ------
 
 This technique is called monkey patching and breaks encapsulation. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional non-standard functionality.
 
 A good reason for extending a built-in prototype is to backport the features of newer JavaScript engines; for example Array.forEach, etc.
 
-How 'this' works in JavaScript
+<a name='this'>How 'this' works in JavaScript<a/>
 ------
 
 This always refers to the object that a function is a method of. When we define a function doSomething() in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. An onclick property, though, is owned by the HTML element it belongs to.
 
 http://quickleft.com/blog/jquery-conf-video-understanding-scope-in-javascript
 
-Hashtable
+<a name='hashtable'>Hashtable<a/>
 ------
 
 In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found.
 
-Difference between .call and .apply
+<a name='callapply'>Difference between .call and .apply<a/>
 ------
 
 Apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
@@ -170,7 +170,7 @@ Apply lets you invoke the function with arguments as an array; call requires the
 <pre><code>theFunction.apply(valueForThis, arrayOfArgs)
 theFunction.call(valueForThis, arg1, arg2, ...)</code></pre>
 
-Arity of a function
+<a name='arity'>Arity of a function<a/>
 ------
 
 The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
