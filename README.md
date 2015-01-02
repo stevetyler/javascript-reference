@@ -67,24 +67,24 @@ In capturing model the event will be handled by the div first(click event handle
 
 In bubbling model it is the opposite. In this model the event will be first handled by the li first and the ul and at the last by the div element.
 
-Javascript Inheritance
+<a name='inheritance'>Javascript Inheritance</a>
 ------
 
 JavaScript only has one construct: objects and each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.
 
 While this is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model is in fact more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model, while the other way around is a far more difficult task.
 
-AJAX - Asynchronous Javascript and XML
+<a name='ajax'>AJAX - Asynchronous Javascript and XML<a/>
 ------
 
 With Ajax, web applications can send data to, and retrieve data from, a <a href="http://en.wikipediorg/wiki/Web_server">server</a> asynchronously (in the background) without interfering with the display and behaviour of the existing page. Data can be retrieved using the <a href="http://en.wikipediorg/wiki/XMLHttpRequest">XMLHttpRequest</a> <a href="http://en.wikipediorg/wiki/Object_(computer_science)">object</a>. Despite the name, the use of XML is not required (<a href="http://en.wikipediorg/wiki/JavaScript_Object_Notation">JSON</a> is often used instead), and the requests do not need to be asynchronous.
 
-JSONP and how it's not really AJAX
+<a name='jsonp'>JSONP and how it's not really AJAX<a/>
 ------
 
 JSONP or "JSON with padding" is a communication technique used in JavaScript programs running in web browsers to request data from a server in a different domain, something prohibited by typical web browsers because of the same-origin policy.
 
-Same-origin policy with regards to JavaScript
+<a name='sameorigin'>Same-origin policy with regards to JavaScript<a/>
 ------
 
 Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons to the URL http://store.company.com/dir/page.html:
@@ -124,7 +124,7 @@ Two pages have the same origin if the protocol, port (if one is specified), and 
 </table> 
 
 
-Host objects and native objects
+<a name='hostnative'>Host objects and native objects<a/>
 ------
 
 Host objects : 
