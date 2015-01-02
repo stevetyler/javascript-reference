@@ -197,10 +197,10 @@ All of the comparisons above produce false with the === operator and it’s reco
 
 How would you go about checking for any of these states?
 
-<a name='closures'>Closures and There Uses<a/>
+<a name='closures'>Closures and there uses<a/>
 ------
 
-<a name='anonymous'>Anonymous Functions Use Cases<a/>
+<a name='anonymous'>Anonymous functions use cases<a/>
 ------
 
 <a name='modulepattern'>JavaScript Module Pattern<a/>
