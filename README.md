@@ -3,10 +3,30 @@
 
   1. [Event delegation](#eventdelegation)
   1. [Event bubbling & capturing](#bubblecapture)
+  1. [Javascript inheritance](#inheritance)
+  1. [AJAX](#ajax)
+  1. [JSONP](#jsonp)
+  1. [Same-origin policy](#sameorigin)
+  1. [Host & native objects](#hostnative)
+  1. [Extending built in objects]
+  1. [How 'this' works]
+  1. [Hashtable]
+  1. [Difference between .call and .apply]
+  1. [Arity of a function]
+  1. [The difference between null, undefined & undeclared]
+  1. [Closures and there Uses]
+  1. [Anonymous functions use cases]
+  1. [JavaScript Module Pattern]
+  1. [Code Organization]
+  1. 
+  1. [Function.prototype.bind]
+  1. [document.write()]
+  1. [Feature Detection, Feature Inference, and using the UA string]
+  1. [document load and document ready event]
   
 
 
-<a name='eventdelegation'>Event delegation</a>D
+<a name='eventdelegation'>Event delegation</a>
 ------
 
 Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent. The event listener analyses bubbled events to find a match on child elements.
@@ -155,7 +175,23 @@ Arity of a function
 ------
 
 The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
- 
+
+Difference between == and ===
+------
+
+If the two operands are of the same type and have the same value, then === produces true and !== produces false.  == and != attempt to coerce the values. These are some of the interesting cases:
+<pre>'' == '0'           // false
+0 == ''             // true
+0 == '0'            // true
+false == 'false'    // false
+false == '0'        // true
+false == undefined  // false
+false == null       // false
+null == undefined   // true
+' \t\r\n ' == 0     // true</pre>
+
+All of the comparisons above produce false with the === operator and it’s recommended to always use === and !==
+
 The Difference between a variable that is: null, undefined or undeclared
 ------
 
@@ -178,7 +214,6 @@ Code Organization
 
 module pattern, classical inheritance
 
-  
 Difference between: function Person(){}, var person = Person(), and var person = new Person()
 ------
 
@@ -194,35 +229,17 @@ document.write()
 Feature Detection, Feature Inference, and using the UA string
 ------
 
+Getting query string parameter from the browser window's URL
+------
 
+Describe a strategy for memoization (avoiding calculation repetition) in JavaScript
+------
+
+Ternary expressions
+------
 
 document load and document ready event
 ------
-
-<h4> Difference between == and ===</h4>
-If the two operands are of the same type and have the same value, then === produces true and !== produces false.  == and != attempt to coerce the values. These are some of the interesting cases:
-<pre>'' == '0'           // false
-0 == ''             // true
-0 == '0'            // true
-false == 'false'    // false
-false == '0'        // true
-false == undefined  // false
-false == null       // false
-null == undefined   // true
-' \t\r\n ' == 0     // true</pre>
-All of the comparisons above produce false with the === operator and it’s recommended to always use === and !==
-<h4> Explain how you would get a query string parameter from the browser window's URL.</h4>
-
-<hr />
-<h4> Describe inheritance patterns in JavaScript.</h4>
-Make this work:
-
-[1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
-<h4> Describe a strategy for memoization (avoiding calculation repetition) in JavaScript.</h4>
-<hr />
-<h4> Why is it called a Ternary expression, what does the word "Ternary" indicate?</h4>
-<hr />
-
  
 Advantages and disadvantages to using "use strict"
 ------
@@ -236,11 +253,8 @@ Prototypal Inheritance
 AMD vs CommonJS
 ------
 
-
 JavaScript Templating
 ------
-
-If so, what libraries have you used? (Mustache.js, Handlebars etc.)
 
 Javascript Hoisting
 ------
