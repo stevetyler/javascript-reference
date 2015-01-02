@@ -8,21 +8,20 @@
   1. [JSONP](#jsonp)
   1. [Same-origin policy](#sameorigin)
   1. [Host & native objects](#hostnative)
-  1. [Extending built in objects]
-  1. [How 'this' works]
-  1. [Hashtable]
-  1. [Difference between .call and .apply]
-  1. [Arity of a function]
-  1. [The difference between null, undefined & undeclared]
-  1. [Closures and there Uses]
-  1. [Anonymous functions use cases]
-  1. [JavaScript Module Pattern]
-  1. [Code Organization]
-  1. 
-  1. [Function.prototype.bind]
-  1. [document.write()]
-  1. [Feature Detection, Feature Inference, and using the UA string]
-  1. [document load and document ready event]
+  1. [Extending built in objects](#builtin)
+  1. [How 'this' works](#this)
+  1. [Hashtable](#hashtable)
+  1. [Difference between .call and .apply](#callapply)
+  1. [Arity of a function](#arity)
+  1. [The difference between null, undefined & undeclared](#nullundefined)
+  1. [Closures and there Uses](#closures)
+  1. [Anonymous functions use cases](#anonymous)
+  1. [JavaScript Module Pattern](#modulepattern)
+  1. [Code Organization](#organization)
+  1. [Function.prototype.bind](#bind)
+  1. [document.write()](#documentwrite)
+  1. [Feature Detection, Feature Inference, and using the UA string](#feature)
+  1. [document load and document ready event](#documentload)
   
 
 
@@ -67,7 +66,7 @@ In capturing model the event will be handled by the div first(click event handle
 
 In bubbling model it is the opposite. In this model the event will be first handled by the li first and the ul and at the last by the div element.
 
-<a name='inheritance'>Javascript Inheritance</a>
+<a name='inheritance'>Javascript inheritance</a>
 ------
 
 JavaScript only has one construct: objects and each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.
