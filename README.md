@@ -1,12 +1,13 @@
 Event Delegation
 ------
 
-Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent.  That event listener analyses bubbled events to find a match on child elements.
+Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent. The event listener analyses bubbled events to find a match on child elements.
 
-Benefits of JavaScript event delegation:
+Benefits:
 
-*  Less event handlers to setup and reside in memory leading to better performance and less crashing.
-*  No need to re-attach handlers after a DOM update. *  *  If your page content is generated dynamically, via Ajax for example, you don’t need to add and remove event handlers as elements are loaded or unloaded.
+*  Less event handlers to setup and reside in memory leading to better performance and less crashing
+*  No need to re-attach handlers after a DOM update
+*  If your page content is generated dynamically, via Ajax for example, you don’t need to add and remove event handlers as elements are loaded or unloaded
 
 Potential problems:
 
@@ -38,34 +39,9 @@ In capturing model the event will be handled by the div first(click event handle
 
 In bubbling model it is the opposite. In this model the event will be first handled by the li first and the ul and at the last by the div element.
 
-How 'this' works in JavaScript
+Host Objects and Native Objects
 ------
 
-This always refers to the “owner” of the function we're executing, or rather, to the object that a function is a method of. When we define our faithful function doSomething() in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. An onclick property, though, is owned by the HTML element it belongs to.
-http://quickleft.com/blog/jquery-conf-video-understanding-scope-in-javascript
-
-Hashtable
-------
-
-In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found.
-
-<h4>The Difference between a variable that is: null, undefined or undeclared</h4>
-<hr />
-<h4>How would you go about checking for any of these states?</h4>
-<hr />
-<h4> What is a closure, and how/why would you use one?</h4>
-<hr />
-<h4> Anonymous functions use cases</h4>
- One off tasks
- <hr />
-<h4> Explain the "JavaScript module pattern" and when you'd use it.</h4>
-Bonus points for mentioning clean namespacing.
-<hr />
-<h4> What if your modules are namespace-less?</h4>
-<hr />
-<h4> How do you organize your code? (module pattern, classical inheritance?)</h4>
-<hr />
-<h4> What's the difference between host objects and native objects?</h4>
 Host objects : 
 
 *  Array
@@ -82,13 +58,55 @@ Native objects:
 *  history
 *  setTimeout
 *  getElementsByTagName
+
+
+How 'this' Works in JavaScript
+------
+
+This always refers to the object that a function is a method of. When we define a function doSomething() in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. An onclick property, though, is owned by the HTML element it belongs to.
+
+http://quickleft.com/blog/jquery-conf-video-understanding-scope-in-javascript
+
+Hashtable
+------
+
+In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the correct value can be found.
+
+Difference Between .call and .apply
+------
+
+Apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+
+<pre><code>theFunction.apply(valueForThis, arrayOfArgs)
+theFunction.call(valueForThis, arg1, arg2, ...)</code></pre>
+
+
+The Difference between a variable that is: null, undefined or undeclared
+------
+
+How would you go about checking for any of these states?
+
+Closures and There Uses
+------
+
+Anonymous Functions Use Cases
+------
+
+JavaScript Module Pattern
+------
+
+clean namespacing.
+What if your modules are namespace-less?
+
+Code Organization
+------
+
+module pattern, classical inheritance
+
   
 <h4> Difference between: function Person(){}, var person = Person(), and var person = new Person()?</h4>
 <hr />
-<h4> What's the difference between .call and .apply?</h4>
- Apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
-<pre><code>theFunction.apply(valueForThis, arrayOfArgs)
-theFunction.call(valueForThis, arg1, arg2, ...)</code></pre>
+
 <hr />
 <h4> Explain Function.prototype.bind?</h4>
 <hr />
