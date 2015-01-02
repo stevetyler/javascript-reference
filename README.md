@@ -144,14 +144,14 @@ Native objects:
 *  setTimeout
 *  getElementsByTagName
 
-<a name='builtin'>Extending built in JavaScript objects<a/>
+<a name='builtin'>Extending built in objects<a/>
 ------
 
 This technique is called monkey patching and breaks encapsulation. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional non-standard functionality.
 
 A good reason for extending a built-in prototype is to backport the features of newer JavaScript engines; for example Array.forEach, etc.
 
-<a name='this'>How 'this' works in JavaScript<a/>
+<a name='this'>How 'this' works<a/>
 ------
 
 This always refers to the object that a function is a method of. When we define a function doSomething() in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. An onclick property, though, is owned by the HTML element it belongs to.
