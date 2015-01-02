@@ -56,7 +56,7 @@ JSONP and how it's not really AJAX
 
 JSONP or "JSON with padding" is a communication technique used in JavaScript programs running in web browsers to request data from a server in a different domain, something prohibited by typical web browsers because of the same-origin policy.
 
-Explain the same-origin policy with regards to JavaScript
+Same-origin policy with regards to JavaScript
 ------
 
 Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons to the URL http://store.company.com/dir/page.html:
