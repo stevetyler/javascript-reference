@@ -5,7 +5,7 @@ Event delegation allows you to avoid adding event listeners to specific nodes; 
 
 Benefits:
 
-*  Less event handlers to setup and reside in memory leading to better performance and less crashing
+*  Less event handlers to setup and reside in memory leading to better performance
 *  No need to re-attach handlers after a DOM update
 *  If your page content is generated dynamically, via Ajax for example, you don’t need to add and remove event handlers as elements are loaded or unloaded
 
@@ -38,6 +38,23 @@ If you take this structure and assume that a click event has happened in the li 
 In capturing model the event will be handled by the div first(click event handlers in the div will fire first) then in the ul then at the last in the target element li.
 
 In bubbling model it is the opposite. In this model the event will be first handled by the li first and the ul and at the last by the div element.
+
+Javascript Inheritance
+------
+
+JavaScript only has one construct: objects and each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.
+
+While this is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model is in fact more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model, while the other way around is a far more difficult task.
+
+AJAX - Asynchronous Javascript and XML
+------
+
+With Ajax, web applications can send data to, and retrieve data from, a <a href="http://en.wikipediorg/wiki/Web_server">server</a> asynchronously (in the background) without interfering with the display and behaviour of the existing page. Data can be retrieved using the <a href="http://en.wikipediorg/wiki/XMLHttpRequest">XMLHttpRequest</a> <a href="http://en.wikipediorg/wiki/Object_(computer_science)">object</a>. Despite the name, the use of XML is not required (<a href="http://en.wikipediorg/wiki/JavaScript_Object_Notation">JSON</a> is often used instead), and the requests do not need to be asynchronous.
+
+JSONP and how it's not really AJAX
+------
+
+JSONP or "JSON with padding" is a communication technique used in JavaScript programs running in web browsers to request data from a server in a different domain, something prohibited by typical web browsers because of the same-origin policy.
 
 Host Objects and Native Objects
 ------
@@ -80,77 +97,11 @@ Apply lets you invoke the function with arguments as an array; call requires the
 <pre><code>theFunction.apply(valueForThis, arrayOfArgs)
 theFunction.call(valueForThis, arg1, arg2, ...)</code></pre>
 
-
-The Difference between a variable that is: null, undefined or undeclared
+Arity of a function
 ------
 
-How would you go about checking for any of these states?
-
-Closures and There Uses
-------
-
-Anonymous Functions Use Cases
-------
-
-JavaScript Module Pattern
-------
-
-clean namespacing.
-What if your modules are namespace-less?
-
-Code Organization
-------
-
-module pattern, classical inheritance
-
-  
-<h4> Difference between: function Person(){}, var person = Person(), and var person = new Person()?</h4>
-<hr />
-
-<hr />
-<h4> Explain Function.prototype.bind?</h4>
-<hr />
-<h4> When do you optimize your code?</h4>
-<hr />
-<h4> When would you use document.write()?</h4>
-<p>Most generated ads still utilize document.write() although its use is frowned upon</p>
-<hr />
-<h4> What's the difference between feature detection, feature inference, and using the UA string</h4>
-<hr />
-<h4> Explain AJAX (Asynchronous Javascript and XML) in as much detail as possible</h4>
-  With Ajax, web applications can send data to, and retrieve data from, a <a href="http://en.wikipediorg/wiki/Web_server">server</a> asynchronously (in the background) without interfering with the display and behaviour of the existing page. Data can be retrieved using the <a href="http://en.wikipediorg/wiki/XMLHttpRequest">XMLHttpRequest</a> <a href="http://en.wikipediorg/wiki/Object_(computer_science)">object</a>. Despite the name, the use of XML is not required (<a href="http://en.wikipediorg/wiki/JavaScript_Object_Notation">JSON</a> is often used instead), and the requests do not need to be asynchronous.
-<h4> Explain how JSONP works (and how it's not really AJAX)</h4>
-<p>JSONP or "JSON with padding" is a communication technique used in JavaScript programs running in web browsers to request data from a server in a different domain, something prohibited by typical web browsers because of the same-origin policy.</p>
-
-<h4> Can you explain how inheritance works in JavaScript?</h4>
- JavaScript only has one construct: objects and each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.
-
-While this is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model is in fact more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model, while the other way around is a far more difficult task.
-
----
-
-####Why is extending built in JavaScript objects not a good idea?
-
-This technique is called monkey patching and breaks encapsulation. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional non-standard functionality.
-<hr />
-<h4> Why is extending built ins a good idea?</h4>
-<p>A good reason for extending a built-in prototype is to backport the features of newer JavaScript engines; for example Array.forEach, etc.</p>
-<hr />
-<h4> Difference between document load event and document ready event?</h4>
-<hr />
-<h4> Difference between == and ===</h4>
-If the two operands are of the same type and have the same value, then === produces true and !== produces false.  == and != attempt to coerce the values. These are some of the interesting cases:
-<pre>'' == '0'           // false
-0 == ''             // true
-0 == '0'            // true
-false == 'false'    // false
-false == '0'        // true
-false == undefined  // false
-false == null       // false
-null == undefined   // true
-' \t\r\n ' == 0     // true</pre>
-All of the comparisons above produce false with the === operator and it’s recommended to always use === and !==
-<h4> Explain how you would get a query string parameter from the browser window's URL.</h4>
+The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
+ 
 <h4> Explain the same-origin policy with regards to JavaScript.</h4>
  Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons to the URL http://store.company.com/dir/page.html:
 <table width="606" border="0" cellspacing="0" cellpadding="2">
@@ -186,7 +137,72 @@ All of the comparisons above produce false with the === operator and it’s reco
 <td valign="top" width="248">Different host</td>
 </tr>
 </tbody>
-</table>
+</table> 
+ 
+The Difference between a variable that is: null, undefined or undeclared
+------
+
+How would you go about checking for any of these states?
+
+Closures and There Uses
+------
+
+Anonymous Functions Use Cases
+------
+
+JavaScript Module Pattern
+------
+
+clean namespacing.
+What if your modules are namespace-less?
+
+Code Organization
+------
+
+module pattern, classical inheritance
+
+  
+Difference between: function Person(){}, var person = Person(), and var person = new Person()
+------
+
+Function.prototype.bind
+------
+
+<h4> When do you optimize your code?</h4>
+<hr />
+document.write()
+------
+
+<p>Most generated ads still utilize document.write() although its use is frowned upon</p>
+<hr />
+
+Feature Detection, Feature Inference, and using the UA string
+------
+
+
+Extending built in JavaScript objects
+
+This technique is called monkey patching and breaks encapsulation. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional non-standard functionality.
+
+A good reason for extending a built-in prototype is to backport the features of newer JavaScript engines; for example Array.forEach, etc.</p>
+
+document load and document ready event
+------
+
+<h4> Difference between == and ===</h4>
+If the two operands are of the same type and have the same value, then === produces true and !== produces false.  == and != attempt to coerce the values. These are some of the interesting cases:
+<pre>'' == '0'           // false
+0 == ''             // true
+0 == '0'            // true
+false == 'false'    // false
+false == '0'        // true
+false == undefined  // false
+false == null       // false
+null == undefined   // true
+' \t\r\n ' == 0     // true</pre>
+All of the comparisons above produce false with the === operator and it’s recommended to always use === and !==
+<h4> Explain how you would get a query string parameter from the browser window's URL.</h4>
+
 <hr />
 <h4> Describe inheritance patterns in JavaScript.</h4>
 Make this work:
@@ -196,8 +212,7 @@ Make this work:
 <hr />
 <h4> Why is it called a Ternary expression, what does the word "Ternary" indicate?</h4>
 <hr />
-<h4> What is the arity of a function?</h4>
- The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the <a href="https://developer.mozillorg/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.prototype.length</a> property.
+
  
 Advantages and disadvantages to using "use strict"
 ------
@@ -205,24 +220,24 @@ Advantages and disadvantages to using "use strict"
 Only compatible with ECMAscript 5.
  
  
-<h4> Prototypal Inheritance</h4>
+Prototypal Inheritance
+------
 
-<h4> How do you go about testing your JavaScript?</h4>
-<hr />
-<h4> AMD vs. CommonJS?</h4>
-<hr />
+AMD vs CommonJS
+------
 
-<h4> Have you ever used JavaScript templating?</h4>
+
+JavaScript Templating
+------
+
 If so, what libraries have you used? (Mustache.js, Handlebars etc.)
-<hr />
-<h4> Explain "hoisting".</h4>
-<hr />
-<h4> What's the difference between an "attribute" and a "property"?</h4>
-<hr />
 
-<h4> Why the following doesn't work as an IIFE: function foo(){ }();.</h4>
+Javascript Hoisting
+------
 
- (function foo(){ })();.
-<hr />
+Difference between an "attribute" and a "property"
+------
+
+
  
 
