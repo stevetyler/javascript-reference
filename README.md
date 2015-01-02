@@ -1,8 +1,8 @@
 <a name='toc'>Table of Contents</a>
 ------
 
-  1. [Event delegation](#eventdelegation)
-  1. [Event bubbling & capturing](#bubblecapture)
+  1. [event delegation](#eventdelegation)
+  1. [event bubbling & capturing](#bubblecapture)
   1. [Javascript inheritance](#inheritance)
   1. [AJAX](#ajax)
   1. [JSONP](#jsonp)
@@ -25,7 +25,7 @@
   
 
 
-<a name='eventdelegation'>Event delegation</a>
+<a name='eventdelegation'>event delegation</a>
 ------
 
 Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent. The event listener analyses bubbled events to find a match on child elements.
@@ -43,7 +43,7 @@ Potential problems:
 
 You need caution when managing some mouse events. If your code is handling the mousemoveevent you are in serious risk of creating a performance bottleneck because the mousemove event is triggered so often. The mouseout event has a <a href="http://www.quirksmode.org/js/events_mouse.html#link8">quirky behaviour</a> that is difficult to manage with event delegation.
 
-<a name='bubblecapture'>Event bubbling and capturing<a/>
+<a name='bubblecapture'>event bubbling and capturing<a/>
 ------
 
 Event bubbling and capturing are two ways of event propagation in HTML DOM. In bubbling the event is first captured and handled by the inner most element and then propagated to outer elements.
