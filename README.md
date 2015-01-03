@@ -200,6 +200,8 @@ How would you go about checking for any of these states?
 <a name='closures'>Closures and there uses<a/>
 ------
 
+http://www.sitepoint.com/javascript-closures-demystified/
+
 <a name='anonymous'>Anonymous functions use cases<a/>
 ------
 
