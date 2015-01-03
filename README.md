@@ -255,8 +255,10 @@ AMD vs CommonJS
 JavaScript Templating
 ------
 
-Javascript Hoisting
+Javascript variable scope & hoisting
 ------
+
+http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting
 
 Difference between an "attribute" and a "property"
 ------
