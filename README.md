@@ -199,6 +199,7 @@ How would you go about checking for any of these states?
 
 <a name='closures'>Closures and there uses<a/>
 ------
+http://blog.sourcing.io/interview-questions
 
 http://www.sitepoint.com/javascript-closures-demystified/
 
