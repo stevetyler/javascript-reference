@@ -211,6 +211,7 @@ http://www.sitepoint.com/javascript-closures-demystified/
 <a name='modulepattern'>JavaScript Module Pattern<a/>
 ------
 
+http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
 clean namespacing.
 What if your modules are namespace-less?
 
@@ -254,6 +255,8 @@ http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript
  
 AMD vs CommonJS
 ------
+
+http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
 
 JavaScript Templating
 ------
