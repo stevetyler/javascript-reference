@@ -79,6 +79,8 @@ While this is often considered to be one of JavaScript's weaknesses, the prototy
 
 With Ajax, web applications can send data to, and retrieve data from, a <a href="http://en.wikipediorg/wiki/Web_server">server</a> asynchronously (in the background) without interfering with the display and behaviour of the existing page. Data can be retrieved using the <a href="http://en.wikipediorg/wiki/XMLHttpRequest">XMLHttpRequest</a> <a href="http://en.wikipediorg/wiki/Object_(computer_science)">object</a>. Despite the name, the use of XML is not required (<a href="http://en.wikipediorg/wiki/JavaScript_Object_Notation">JSON</a> is often used instead), and the requests do not need to be asynchronous.
 
+http://www.sitepoint.com/use-jquerys-ajax-function/
+
 <a name='jsonp'>JSONP and how it's not really AJAX<a/>
 ------
 
