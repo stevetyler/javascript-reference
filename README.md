@@ -248,7 +248,7 @@ Advantages and disadvantages to using "use strict"
 ------
 
 Only compatible with ECMAscript 5.
- 
+http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it 
  
 AMD vs CommonJS
 ------
